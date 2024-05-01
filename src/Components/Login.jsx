@@ -104,7 +104,6 @@ export default function LoginAndRegisterPage() {
   };
   const onAccountCreateSubmit = (data) => {
     let obj = {
-    
       name: data.Name,
       email: data.Email, 
       password: data.Password,
@@ -113,7 +112,7 @@ export default function LoginAndRegisterPage() {
 
     dispatch(createAccount(obj))
       .then(() => {
-        showSuccessToast("Account Created Successfully.");
+        showSuccessToast("Account Created Successfully. Login to your account!!");
       })
       .catch(() => {
         showErrorToast("Something went wrong!");
